@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditional staterment</title>
+</head>
+<body>
+
+<h1 >testing
+    <span th:style="${free} ? 'color:yellow':'color:green'"  th:text="${free} ? 'free':'not free'"></span>
+</h1>
+</body>
+</html>

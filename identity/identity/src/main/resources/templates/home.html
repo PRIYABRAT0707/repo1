@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .bod{
+        background-color:lavender;
+        }
+
+
+    </style>
+</head>
+<body class="bod">
+<header th:replace="homepage.html::header1"></header>
+<div class="container-fluid mt-3">
+
+
+<form  action="submit" method="post" enctype="multipart/form-data">
+    <div class="form-row">
+         <div class="form-group col-md-6">
+            <label for="inputEmail4">firstname</label>
+            <input class="form-control" id="firstname" name="firstname" placeholder="firstname" type="text">
+         </div>
+
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">middlename</label>
+                <input class="form-control" id="middlename" name="middlename" placeholder="middlename" type="text">
+            </div>
+  </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">surname</label>
+                    <input class="form-control" id="surname" name="surname" placeholder="surname" type="text">
+                </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">DATE_OF_BIRTH</label>
+                        <input class="form-control" id="dob1" name="dob" placeholder="mm-dd-yyyy" type="date">
+                    </div>
+            </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">username</label>
+                            <input class="form-control" id="us1" name="username" placeholder="username" type="text">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Password</label>
+                            <input name="password" class="form-control" id="inputPassword4" placeholder="Password" type="text">
+                        </div>
+                    </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Email</label>
+                                <input name="email" class="form-control" id="inputEmail4" placeholder="Email" type="text">
+                            </div>
+
+
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">mobilenumber</label>
+                                    <input class="form-control" id="mobilenum" name="mobilenum" placeholder="mobilenum"
+                                           type="text">
+                                </div>
+
+                             </div>
+
+                          <div class="form-row">
+
+                            <div class="form-group col-md-6">
+                                <label for="inputAddress">Address 1</label>
+                                <input name="address1" class="form-control" id="inputAddress" placeholder="1234 Main St" type="text">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="inputAddress2">Address 2</label>
+                                <input name="address2" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+                                       type="text">
+                            </div>
+                          </div>
+
+
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="inputCity">City</label>
+                                    <input  name="city" class="form-control" id="inputCity" type="text">
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">State</label>
+                                    <select class="form-control" id="inputState" name="state">
+                                        <option>choose</option>
+                                        <option>odisha</option>
+                                        <option>telengana</option>
+                                        <option>karnataka</option>
+                                        <option>maharastra</option>
+                                        <option>delhi</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="form-group col-md-4">
+                                    <label for="inputZip">Zip</label>
+                                    <input class="form-control" id="inputZip" name="zip" type="text">
+                                </div>
+                            </div>
+
+<div class="form-row">
+
+                            <div class="form-group col-md-4">
+                                <label for="exampleFormControlFile1">upload your image</label>
+                                <input class="form-control-file"  id="exampleFormControlFile1"
+                                       name="file" type="file">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="exampleFormControlFile1">upload your certificate</label>
+                                <input class="form-control-file"  id="exampleFormControlFile2"
+                                       name="file1" type="file">
+
+                        </div>
+</div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" id="gridCheck" type="checkbox">
+                                    <label class="form-check-label" for="gridCheck">
+                                        Check me out
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Sign in</button>
+
+</form>
+</div>
+</body>
+</html>

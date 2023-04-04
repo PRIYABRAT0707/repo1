@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BIRD_LIST</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<header th:replace="homepage.html::header1"></header>
+<div class=" mt-4">
+<table width="100%" border="3px" bgcolor="lavender" >
+    <tr>
+       <td>BIRD_ID</td>
+        <td>BIRD_NAME</td>
+        <td>IS_MIGRATORY</td>
+        <td>COUNTRY</td>
+        <td>UPDATE</td>
+        <td>DELETE</td>
+    </tr>
+    <tr th:each="b : ${birdlist}">
+
+        <td th:text="${b.getId()}"></td>
+        <td th:text="${b.getBirdName()}"></td>
+        <td th:text="${b.isMigratory()}"></td>
+        <td th:text="${b.getCountryWhereMostSeen()}"></td>
+        <td ><a th:href="@{/bird5/{id}(id=${b.getId()})}" >update</a></td>
+        <td> <a th:href="@{/bird4/{id}(id=${b.getId()})}">delete </a> </td>
+    </tr>
+
+
+</table>
+
+</div>
+</body>
+</html>

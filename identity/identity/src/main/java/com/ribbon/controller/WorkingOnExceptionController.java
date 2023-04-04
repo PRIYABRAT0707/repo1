@@ -1,0 +1,8 @@
+package com.ribbon.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class WorkingOnExceptionController {
+
+}
